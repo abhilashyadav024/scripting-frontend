@@ -1,15 +1,3 @@
-##!/bin/bash
-#yum install nginx -y &>>${LOG_FILE}
-#STAT_CHECK $? "Nginx Installation"
-#rm -rf /usr/share/nginx/html/*
-#STAT_CHECK $? "Remove old HTML Pages"
-#cd  /tmp/frontend-main/static/ && cp -r * /usr/share/nginx/html/
-#STAT_CHECK $? "Copying Frontend Content"
-#cd  /tmp/frontend-main/static/ && cp -r * /usr/share/nginx/html/
-#STAT_CHECK $? "Copy Nginx Config File"
-#systemctl enable nginx &>>${LOG_FILE} && systemctl restart nginx &>>${LOG_FILE}
-#STAT_CHECK $? "Restart Nginx"
-
 #!/bin/bash
 i=1
 while [ $1 -le 100 ]
@@ -17,12 +5,3 @@ do
       echo $i
       i=$(($i+1))
 done
-
-
-
-##i=1
-##while [ $i -le 100 ]
-##do
-##    echo $i
-##    i=$(($i+1))
-##done
